@@ -1,0 +1,144 @@
+GET http://localhost:8080/api/games/all
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaXNzIjoiRW1pbmVtIn0.wFO55oi5rU30EM42K_1nRi9_s3B12wEKJn66uu5S1IE
+###
+
+GET http://localhost:8080/api/games/1/gamingtables/1/users/1/usergamingtables
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaXNzIjoiRW1pbmVtIn0.wFO55oi5rU30EM42K_1nRi9_s3B12wEKJn66uu5S1IE
+###
+
+GET http://localhost:8080/api/games/1/gamingtables/2/deals/1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaXNzIjoiRW1pbmVtIn0.wFO55oi5rU30EM42K_1nRi9_s3B12wEKJn66uu5S1IE
+###
+
+
+POST http://localhost:8080/api/games/1/gamingtables/1/users/2/usergamingtables
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlzcyI6IkVtaW5lbSJ9.ti3Ci0zD-pAxKiYOOBIV-JLdI7PpqMd1HsWOZnFoRrY
+
+{
+
+}
+
+###
+
+POST http://localhost:8080/api/games/1/boards/1/users/1/board_user
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaXNzIjoiRW1pbmVtIn0.wFO55oi5rU30EM42K_1nRi9_s3B12wEKJn66uu5S1IE
+
+{
+
+}
+
+###
+
+POST http://localhost:8080/api/games/1/gamingtables/1/users/3/usergamingtables
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZGEiLCJyb2xlcyI6WyJST0xFX1VTRVIiXSwiaXNzIjoiRW1pbmVtIn0.8o5DB6cTmHty6AZGQtzghCLygXYp1tASTZLVo3bOE10
+
+{
+
+}
+
+###
+
+POST http://localhost:8080/api/games/1/boards
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaXNzIjoiRW1pbmVtIn0.wFO55oi5rU30EM42K_1nRi9_s3B12wEKJn66uu5S1IE
+
+{
+  "table_status": "Active"
+}
+
+###
+
+POST http://localhost:8080/api/games/1/gamingtables
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaXNzIjoiRW1pbmVtIn0.wFO55oi5rU30EM42K_1nRi9_s3B12wEKJn66uu5S1IE
+
+{
+  "table_status": "Active"
+}
+
+###
+
+GET http://localhost:8080/api/games/1/gamingtables
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaXNzIjoiRW1pbmVtIn0.wFO55oi5rU30EM42K_1nRi9_s3B12wEKJn66uu5S1IE
+
+###
+
+GET http://localhost:8080/api/users/all/1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaXNzIjoiRW1pbmVtIn0.wFO55oi5rU30EM42K_1nRi9_s3B12wEKJn66uu5S1IE
+
+###
+
+
+POST http://localhost:8080/api/users/register
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin",
+  "role": "ROLE_ADMIN"
+}
+
+###
+POST http://localhost:8080/api/users/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+###
+
+POST http://localhost:8080/api/users/register
+Content-Type: application/json
+
+{
+  "username": "user",
+  "password": "user",
+  "role": "ROLE_USER"
+}
+
+###
+
+POST http://localhost:8080/api/users/login
+Content-Type: application/json
+
+{
+  "username": "user",
+  "password": "user"
+}
+
+###
+
+POST http://localhost:8080/api/users/register
+Content-Type: application/json
+
+{
+  "username": "ada",
+  "password": "ada",
+  "role": "ROLE_USER"
+}
+
+###
+
+POST http://localhost:8080/api/users/login
+Content-Type: application/json
+
+{
+  "username": "ada",
+  "password": "ada"
+}
+
+###
+
+GET http://localhost:8080/api/users/logout
+
+###
+
+DELETE http://localhost:8080/api/users/1
+
+###
+
