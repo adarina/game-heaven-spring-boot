@@ -1,10 +1,10 @@
-package com.ada.gameheavenspringboot.userboard.service;
+package com.ada.gameheavenspringboot.boarduser.service;
 
 import com.ada.gameheavenspringboot.Status;
 import com.ada.gameheavenspringboot.board.entity.Board;
 import com.ada.gameheavenspringboot.user.entity.User;
-import com.ada.gameheavenspringboot.userboard.repository.BoardUserRepository;
-import com.ada.gameheavenspringboot.userboard.entity.BoardUser;
+import com.ada.gameheavenspringboot.boarduser.repository.BoardUserRepository;
+import com.ada.gameheavenspringboot.boarduser.entity.BoardUser;
 import jakarta.transaction.Transactional;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

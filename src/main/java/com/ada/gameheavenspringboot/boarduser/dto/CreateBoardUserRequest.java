@@ -1,9 +1,9 @@
-package com.ada.gameheavenspringboot.userboard.dto;
+package com.ada.gameheavenspringboot.boarduser.dto;
 
 
 import com.ada.gameheavenspringboot.board.entity.Board;
 import com.ada.gameheavenspringboot.user.entity.User;
-import com.ada.gameheavenspringboot.userboard.entity.BoardUser;
+import com.ada.gameheavenspringboot.boarduser.entity.BoardUser;
 import lombok.*;
 
 import java.util.function.Function;

@@ -13,8 +13,6 @@ public class PositionBuilder {
 
     private boolean available;
 
-    private boolean active;
-
     private PositionBuilder() {
     }
 
@@ -42,17 +40,12 @@ public class PositionBuilder {
         return this;
     }
 
-    public PositionBuilder withActive(boolean active) {
-        this.active = active;
-        return this;
-    }
     public Position buildPositionEntity() {
         Position position = new Position();
         position.setBoard(board);
         position.setNumber(number);
         position.setUser(user);
         position.setAvailable(available);
-        position.setActive(active);
         return position;
     }
 }

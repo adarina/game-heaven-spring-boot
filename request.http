@@ -30,12 +30,22 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsI
 }
 
 ###
+PUT http://localhost:8080/api/boards/1/users/1/positions/1
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaXNzIjoiRW1pbmVtIn0.wFO55oi5rU30EM42K_1nRi9_s3B12wEKJn66uu5S1IE
+
+{
+  "available": false
+}
+
+###
 
 POST http://localhost:8080/api/games/1/gamingtables/1/users/3/usergamingtables
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZGEiLCJyb2xlcyI6WyJST0xFX1VTRVIiXSwiaXNzIjoiRW1pbmVtIn0.8o5DB6cTmHty6AZGQtzghCLygXYp1tASTZLVo3bOE10
 
 {
+
 
 }
 
@@ -46,7 +56,7 @@ Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaXNzIjoiRW1pbmVtIn0.wFO55oi5rU30EM42K_1nRi9_s3B12wEKJn66uu5S1IE
 
 {
-  "table_status": "Active"
+  "status": "Active"
 }
 
 ###

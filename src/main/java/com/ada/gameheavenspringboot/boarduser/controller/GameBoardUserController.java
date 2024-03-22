@@ -1,4 +1,4 @@
-package com.ada.gameheavenspringboot.userboard.controller;
+package com.ada.gameheavenspringboot.boarduser.controller;
 
 import com.ada.gameheavenspringboot.game.entity.Game;
 import com.ada.gameheavenspringboot.game.service.GameService;
@@ -6,10 +6,10 @@ import com.ada.gameheavenspringboot.board.entity.Board;
 import com.ada.gameheavenspringboot.board.service.BoardService;
 import com.ada.gameheavenspringboot.user.entity.User;
 import com.ada.gameheavenspringboot.user.service.UserService;
-import com.ada.gameheavenspringboot.userboard.dto.CreateBoardUserRequest;
-import com.ada.gameheavenspringboot.userboard.entity.BoardUser;
-import com.ada.gameheavenspringboot.userboard.entity.BoardUserId;
-import com.ada.gameheavenspringboot.userboard.service.BoardUserService;
+import com.ada.gameheavenspringboot.boarduser.dto.CreateBoardUserRequest;
+import com.ada.gameheavenspringboot.boarduser.entity.BoardUser;
+import com.ada.gameheavenspringboot.boarduser.entity.BoardUserId;
+import com.ada.gameheavenspringboot.boarduser.service.BoardUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

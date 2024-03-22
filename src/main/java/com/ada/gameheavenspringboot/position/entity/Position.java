@@ -29,7 +29,7 @@ public class Position {
     private Integer number;
 
     @ManyToOne
-    @JoinColumn(name = "gaming_table_id")
+    @JoinColumn(name = "board_id")
     private Board board;
 
     @ManyToOne
@@ -39,11 +39,13 @@ public class Position {
     @Column(name = "available")
     private boolean available;
 
-    @Column(name = "active")
-    private boolean active;
-
     @PostPersist
     public void logNewPositionCreated() {
         log.info("Position '" + number + "' with ID: " + id + " created in board '" + board.getId());
+    }
+
+    @PostUpdate
+    public void logUpdate() {
+        log.info("Position '" + number + "' with ID: " + id + " created in board '" + board.getId() + user.getUsername() + available);
     }
 }

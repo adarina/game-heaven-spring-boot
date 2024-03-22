@@ -1,10 +1,10 @@
-package com.ada.gameheavenspringboot.userboard.repository;
+package com.ada.gameheavenspringboot.boarduser.repository;
 
 
 import com.ada.gameheavenspringboot.Status;
 import com.ada.gameheavenspringboot.board.entity.Board;
 import com.ada.gameheavenspringboot.user.entity.User;
-import com.ada.gameheavenspringboot.userboard.entity.BoardUser;
+import com.ada.gameheavenspringboot.boarduser.entity.BoardUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

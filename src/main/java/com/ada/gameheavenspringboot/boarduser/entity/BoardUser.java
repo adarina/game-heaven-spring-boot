@@ -1,4 +1,4 @@
-package com.ada.gameheavenspringboot.userboard.entity;
+package com.ada.gameheavenspringboot.boarduser.entity;
 
 import com.ada.gameheavenspringboot.board.entity.Board;
 import com.ada.gameheavenspringboot.user.entity.User;
