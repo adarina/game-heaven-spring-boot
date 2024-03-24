@@ -19,6 +19,7 @@ public class BoardService {
     @Autowired
     public BoardService(BoardRepository boardRepository) {
         this.boardRepository = boardRepository;
+
     }
 
     @Transactional
@@ -29,6 +30,7 @@ public class BoardService {
     public List<Board> findAll(Game game) {
         return boardRepository.findAllByGame(game);
     }
+
 
     public Optional<Board> find(Long id) {
         return boardRepository.findById(id);

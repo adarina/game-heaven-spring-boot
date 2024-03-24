@@ -13,7 +13,7 @@ public class PileBuilder {
         return new PileBuilder();
     }
 
-    public PileBuilder withGamingTable(Board board) {
+    public PileBuilder withBoard(Board board) {
         this.board = board;
         return this;
     }

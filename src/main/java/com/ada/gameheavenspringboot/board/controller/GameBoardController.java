@@ -6,7 +6,7 @@ import com.ada.gameheavenspringboot.board.dto.CreateBoardRequest;
 import com.ada.gameheavenspringboot.board.dto.GetBoardsResponse;
 import com.ada.gameheavenspringboot.board.entity.Board;
 import com.ada.gameheavenspringboot.board.service.BoardService;
-import com.ada.gameheavenspringboot.position.service.PositionService;
+import com.ada.gameheavenspringboot.hand.service.HandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,13 +22,13 @@ public class GameBoardController {
 
     private final BoardService boardService;
 
-    private final PositionService positionService;
+    private final HandService handService;
 
     @Autowired
-    public GameBoardController(GameService gameService, BoardService boardService, PositionService positionService) {
+    public GameBoardController(GameService gameService, BoardService boardService, HandService handService) {
         this.gameService = gameService;
         this.boardService = boardService;
-        this.positionService = positionService;
+        this.handService = handService;
     }
 
     @GetMapping
@@ -52,7 +52,7 @@ public class GameBoardController {
                     .dtoToEntityMapper(game::get)
                     .apply(request);
             board = boardService.create(board);
-            positionService.createPositions(board, game.get().getMaxPlayers());
+            handService.createHands(board, game.get().getMaxPlayers());
 
 
             return ResponseEntity.created(builder.path("/api/games/{game_id}/boards/{board_id}")

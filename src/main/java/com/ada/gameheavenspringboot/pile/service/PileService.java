@@ -1,11 +1,12 @@
 package com.ada.gameheavenspringboot.pile.service;
 
 
+import com.ada.gameheavenspringboot.board.entity.Board;
 import com.ada.gameheavenspringboot.pile.entity.Pile;
 import com.ada.gameheavenspringboot.pile.repository.PileRepository;
-import com.ada.gameheavenspringboot.position.entity.Position;
-import com.ada.gameheavenspringboot.position.repository.PositionRepository;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class PileService {
@@ -20,4 +21,9 @@ public class PileService {
     public Pile create(Pile pile) {
         return pileRepository.save(pile);
     }
+
+    public List<Pile> findAll(Board board) {
+        return pileRepository.findAllByBoard(board);
+    }
+
 }

@@ -1,6 +1,7 @@
-package com.ada.gameheavenspringboot.pile.entity;
+package com.ada.gameheavenspringboot.deck.entity;
 
 import com.ada.gameheavenspringboot.board.entity.Board;
+import com.ada.gameheavenspringboot.game.entity.Game;
 import com.ada.gameheavenspringboot.user.entity.User;
 import jakarta.persistence.*;
 import lombok.*;
@@ -14,22 +15,24 @@ import org.apache.commons.logging.LogFactory;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @ToString
 @Entity
-@Table(name = "piles")
-public class Pile {
+@Table(name = "decks")
+public class Deck {
 
     private static Log log = LogFactory.getLog(User.class);
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "pile_id")
     private Long id;
 
     @ManyToOne
     @JoinColumn(name = "board_id")
     private Board board;
 
+
     @PostPersist
-    public void logNewUserJoinedGamingTable() {
-        log.info("Pilllle '" + board.getId() + "' with ID: " + " joined user '" + id);
+    public void logDeckCreate() {
+        log.info(id + " " + board.getGame());
     }
+
 }
